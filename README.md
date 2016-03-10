@@ -1,6 +1,6 @@
 # Distributed Weakness Filing (DWF)
 
-Distributed Weakness Filing (DWF) aims to provide identifying numbers for security vulnerabilities that is similar in concept to the CVE project.
+Distributed Weakness Filing (DWF) aims to provide identifying numbers for security vulnerabilities that is similar in concept to the CVE project. DWF was created to enable security researchers to register and receive their numbers faster, as well as enabling organizations to follow up on the latest vulnerabilities, enabling them to patch sooner. 
 
 Format wise DWF uses the same format as CVE (DWF-YEAR-NNNN and DWF-YEAR-NNNNNN).
 
