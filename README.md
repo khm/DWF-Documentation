@@ -61,7 +61,7 @@ DNA policy is simple: Ask us. In general to become a DNA you either need to be f
 
 The DWF Management board consists of 5 people and is largely designed to provide a tie breaking mechanism for difficult decisions.
 
-The board currently consists of Kurt Seifried, Larry Cashdollar, Zachary Wikholm and two other board member that currently wishes to remain anonymous. 
+The board currently consists of Kurt Seifried, Larry Cashdollar, Zachary Wikholm and two other board members that currently wish to remain anonymous. 
 
 ## Other questions / concerns / problems
 
