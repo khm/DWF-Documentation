@@ -16,7 +16,7 @@ There are 4 primary ways to get a DWF identifier:
 
 3) You can request a DWF from a DNA, this is ideal if the DNA is associated with the flawed software, or the DNA will assist in the handling of the security vulnerability.
 
-4) You can request a DWF directly either via PULL request in GitHUB to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com.
+4) You can request a DWF directly either via PULL request in GitHUB to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com. You will need to submit some level of data (e.g. the CWE root cause).
 
 ### Is it a vulnerability?
 
@@ -31,6 +31,27 @@ Pragmatically not every single vulnerability can have a DWF identifier. For exam
 1. Take all your vulnerabilities and split them by code base
 2. Take these vulnerabilities and split them by vulnerability type (e.g. XSS vs CSRF)
 3. Take these vulnerabilities and split them by affected version ( e.g. starting affected version r by the fixed versions if retroactively assigning them)
+
+## Getting your entries into the DWF database
+
+To get your entries listed in the official DWF database (located at https://github.com/distributedweaknessfiling/DWF-Database/) you MUST submit the DWF identifier and valid artifacts. 
+
+### Valid artifacts
+
+* Security advisories
+* Vendor security reports
+* Bug reports
+* Code examples
+* Code patches
+
+### Invalid artifacts
+
+* Video or sound recordings of "proof of concept", they're to big, low value, use text instead
+* Generally speaking any binary executable content is to be avoided
+
+### Submitting artifacts with potentially dangerous content
+
+By their nature some artifacts may have dangerous content (e.g. files that cause crashes when processed). We suggest such artifacts be compressed and password protected with a text file attached that contains the password (e.g. zip the file with password "DWF-1500-123456"). 
 
 ## How to become a DNA
 
