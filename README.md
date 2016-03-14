@@ -16,7 +16,7 @@ There are 4 primary ways to get a DWF identifier:
 
 3) You can request a DWF from a DNA, this is ideal if the DNA is associated with the flawed software, or the DNA will assist in the handling of the security vulnerability.
 
-4) You can request a DWF directly either via PULL request in GitHUB to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com. You will need to submit some level of data (e.g. the CWE root cause).
+4) You can request a DWF directly either via PULL request in GitHub to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com. You will need to submit some level of data (e.g. the CWE root cause).
 
 ### Is it a vulnerability?
 
