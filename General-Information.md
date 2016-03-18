@@ -9,3 +9,7 @@ The DWF board of directors consists of (in alphabetical order):
 * Kurt Seifried, Red Hat
 * Larry W. Cashdollar, Akamai Technologies
 * Zachary Wikholm, Independent
+
+## Contacting the DWF ##
+
+THe best way to contact us for public issues is to submit an issue against the appropriate DWF project, this has the advantage of being public and allowing multiple members, and the public to participate in the issue. You can also email the DWF at distributedweaknessfiling@gmail.com (which is currently managed by Kurt Seifried). For private issues please email us.
