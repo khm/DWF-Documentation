@@ -5,7 +5,7 @@
 The DWF board of directors consists of (in alphabetical order):
 
 * Art Manion, CERT/CC
-* Brian Martin, OSVDB
+* Brian Martin, OSF / OSVDB
 * Kurt Seifried, Red Hat
 * Larry W. Cashdollar, Akamai Technologies
 * Zachary Wikholm, Independent
