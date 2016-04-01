@@ -1,10 +1,10 @@
-# Distributed Weakness Filing (DWF)
+# Distributed Weakness Filing (DWF) Project
 
-Distributed Weakness Filing (DWF) aims to provide identifying numbers for security vulnerabilities that is similar in concept to the CVE project. DWF was created to enable security researchers to register and receive their numbers faster, as well as enabling organizations to follow up on the latest vulnerabilities, enabling them to patch sooner. 
+The Distributed Weakness Filing (DWF) Project aims to provide identifying numbers for security vulnerabilities that is similar in concept to the CVE project. The DWF Project was created to enable security researchers to register and receive their numbers faster, as well as enabling organizations to follow up on the latest vulnerabilities, enabling them to patch sooner. 
 
-Format wise DWF uses the same format as CVE (DWF-YEAR-NNNN and DWF-YEAR-NNNNNN).
+Format wise the DWF Project currently uses the same format as CVE (DWF-YEAR-NNNN and DWF-YEAR-NNNNNN).
 
-Numerically DWF can generally be mapped directly to CVE with no conflict, if you spot a conflict between CVE and DWF please notify us so we can fix it.
+Numerically DWF ids can generally be mapped directly to CVE with no conflict, if you spot a conflict between CVE and DWF identifier please notify us so we can fix it.
 
 ## Getting a DWF Identifier
 
@@ -14,17 +14,17 @@ There are 4 primary ways to get a DWF identifier:
 
 2) If you are a DWF Numbering Authority (DNA) (https://github.com/distributedweaknessfiling/DNA-Registry) you can self assign a DWF to the issue(s).
 
-3) You can request a DWF from a DNA, this is ideal if the DNA is associated with the flawed software, or the DNA will assist in the handling of the security vulnerability.
+3) You can request a DWF from a DNA, this is ideal if the DNA is associated with the flawed software (e.g. the vendor is a DNA), or the DNA will assist in the handling of the security vulnerability.
 
-4) You can request a DWF directly either via PULL request in GitHub to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com. You will need to submit some level of data (e.g. the CWE root cause).
+4) You can request a DWF id directly either via PULL request in GitHub to the DWF Database (https://github.com/distributedweaknessfiling/DWF-Database) or by emailing us at distributedweaknessfiling@gmail.com. You will need to submit some level of data (e.g. the CWE root cause).
 
 ### Is it a vulnerability?
 
-DWF Identifiers are for security vulnerabilities in software. DWF Identifiers are not for services (e.g. an XSS in an Open Source or commercially available software package would receive a DWF, but an XSS in a banking website running a custom web service would not receive a DWF Identifier).
+DWF ids are for security vulnerabilities in software. DWF ids are not for services (e.g. an XSS in an Open Source or commercially available software package would receive a DWF id, but an XSS in a banking website running a custom web service would not receive a DWF id).
 
 A vulnerability is generally classified as a flaw that allows an attacker to gain access, elevate privilege, cause a denial of service or have another security related impact. Please note that the impact may be relatively minor (e.g. disclosure of a small, uncontrolled piece of kernel memory) however as we have all learned, small attacks can be chained together to create big attacks.
 
-### DWF splitting and merging 
+### DWF id splitting and merging 
 
 Pragmatically not every single vulnerability can have a DWF identifier. For example if you audit a piece of software and find 500 XSS flaws we're not going to assign 500 DWF Identifiers. As such DWF generally categorizes vulnerabilities in buckets that then receive a DWF Identifier with the following guidelines:
 
@@ -57,11 +57,11 @@ By their nature some artifacts may have dangerous content (e.g. files that cause
 
 DNA policy is simple: Ask us. In general to become a DNA you either need to be finding vulns that needs DWF identifiers, or have people reporting vulns to you that need identifier (e.g. as a vendor or vulnerability coordinator).
 
-## DWF Management Board
+## DWF Project  Management Board
 
 The DWF Management board consists of 5 people and is largely designed to provide a tie breaking mechanism for difficult decisions.
 
-The board currently consists of Kurt Seifried, Larry Cashdollar, Zachary Wikholm and two other board members that currently wish to remain anonymous. 
+or more information please see https://github.com/distributedweaknessfiling/DWF-Documentation/blob/master/General-Information.md
 
 ## Other questions / concerns / problems
 
