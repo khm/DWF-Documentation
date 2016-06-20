@@ -4,7 +4,7 @@ The Distributed Weakness Filing (DWF) Project is the first federated CVE Number 
 
 ## Getting a CVE Identifier from the DWF for your security vulnerability(s)
 
-We are currently deciding on process for this, in the mean time you can file an issue against the DWF Database, or email cve-assign@seifried.org so we don't lose track of your CVE request.
+We are currently deciding on process for this, in the mean time you can submit an issue via the form at https://iwantacve.org/
 
 ## Becoming an Open Source CVE Numbering Authority
 
