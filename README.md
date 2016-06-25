@@ -10,6 +10,10 @@ We are currently deciding on process for this, in the mean time you can submit a
 
 The first step is to contact us, email is good (see our ocntact info), or file an issue. To get involved with the DWF you MUST accept the [Contributor Covenant](Contributor-Agreement.md). 
 
+## Assigning a CVE for the DWF
+
+If you are assigning CVEs on behalf of the DWF please consult the [CVE Assignment HOWTO](CVE-Assignment-HOWTO.md).
+
 ## Becoming an Open Source CVE Numbering Authority
 
 We are currently deciding on process for this, in the mean time you can file an issue against the DWF DNA Registry, or email cve-assign@seifried.org so we don't lose track of your CNA request.
