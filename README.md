@@ -6,6 +6,10 @@ The Distributed Weakness Filing (DWF) Project is the first federated CVE Number 
 
 We are currently deciding on process for this, in the mean time you can submit an issue via the form at https://iwantacve.org/
 
+## Getting involved with the DWF
+
+The first step is to contact us, email is good (see our ocntact info), or file an issue. To get involved with the DWF you MUST accept the Contributor-Agreement.md (the Contributor Covenant, version 1.4, available at http://contributor-covenant.org/version/1/4). 
+
 ## Becoming an Open Source CVE Numbering Authority
 
 We are currently deciding on process for this, in the mean time you can file an issue against the DWF DNA Registry, or email cve-assign@seifried.org so we don't lose track of your CNA request.
