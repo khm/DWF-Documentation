@@ -8,7 +8,7 @@ We are currently deciding on process for this, in the mean time you can submit a
 
 ## Getting involved with the DWF
 
-The first step is to contact us, email is good (see our ocntact info), or file an issue. To get involved with the DWF you MUST accept the [Contributor Covenant](Contributor-Agreement.md). 
+The first step is to contact us, email is good (see our contact info), or file an issue. To get involved with the DWF you MUST accept the [Contributor Covenant](Contributor-Agreement.md). 
 
 ## Assigning a CVE for the DWF
 
