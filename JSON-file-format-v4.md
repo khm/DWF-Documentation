@@ -52,31 +52,59 @@ CVE_impact root level object and child of anything, 1 must be present in root le
   "CVE_data_format": "MITRE",
   "CVE_data_version": "4.0",
   "CVE_data_meta": {
+    "CVE_data_version": "4.0 - optional, to show nesting of various elements",
     "CVE_ID": "CVE-2017-900000",
-    "date_requested": "2017-01-01",
-    "date_assigned": "2017-01-02",
-    "requestor": "kurt@seifried.org",
-    "assigner": "kurt@seifried.org"
+    "CVE_date_requested": "2017-01-01",
+    "CVE_date_assigned": "2017-01-02",
+    "CVE_requestor": "kurt@seifried.org",
+    "CVE_assigner": "kurt@seifried.org"
   },
   "CVE_affects": {
     "CVE_vendor": {
-      "CVE_product": {
-        "products_affected": [
-          {
-            "product_name": "Example product",
-            "product_version": "1.0",
-            "product_affected": "="
+      "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+      "CVE_vendor_data": [
+        {
+          "CVE_vendor_name": "Example corp.",
+          "CVE_product": {
+            "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+            "CVE_products_data": [
+              {
+                "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+                "CVE_product_name": "Example product",
+                "CVE_product_version": "1.0",
+                "CVE_product_affected": "="
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "CVE_vendor_name": "Evil corp.",
+          "CVE_product": {
+            "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+            "CVE_products_data": [
+              {
+                "CVE_product_name": "Evil product",
+                "CVE_product_version": "2.0",
+                "CVE_product_affected": "="
+              }
+            ]
+          }
+        }
+      ]
     }
   },
   "CVE_description": {
-    "lang": "eng",
-    "value": "String description of issue"
+    "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+    "CVE_description_data": [
+      {
+        "lang": "eng",
+        "value": "String description of issue"
+      }
+    ]
   },
   "CVE_references": {
-    "references": [
+    "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+    "CVE_reference_data": [
       {
         "url": "string for url location",
         "name": "string Name of reference i.e. if advisory has name",
@@ -85,12 +113,13 @@ CVE_impact root level object and child of anything, 1 must be present in root le
     ]
   },
   "CVE_problemtype": {
-    "problems": [
+    "CVE_data_version": "4.0 - optional, to show nesting of various elements",
+    "CVE_problemtype_data": [
       {
         "description": [
           {
             "lang": "string ISO 639-2",
-            "value": "string description of problem_type"
+            "value": "string description of problem_type, must be this OR CWE OR OWASP"
           }
         ],
         "cwe": [
