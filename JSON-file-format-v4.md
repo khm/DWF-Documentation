@@ -1,4 +1,4 @@
-# CVE JSON File Format 4.0
+# DRAFT - CVE JSON File Format 4.0
 
 This describes the CVE JSON format version 4.0, this file format primarily covers CVE but also CVE Mentors and CNAs
 
@@ -8,39 +8,75 @@ CVE_* keywords are officially documented (this document), if you see one that is
 
 # The CVE top level objects
 
-CVE_data_type: CVE/CNA/MENTOR must be present in root level, can be present in root level only [single]
+THe CVE is comprised of a number of top level objects. Essentially the "root" object is just a JSON object with members that in turn are objects. These objects can in turn contain more objects, arrays, strings and so on. 
 
-CVE_data_format: MITRE/other must be present in root level, can be present in root level or can be a child of anything [single]
+## CVE_data_type
 
-CVE_data_version must be present in root level, can be present in root level or can be a child of anything [single]
+CVE/CNA/MENTOR must be present in root level, can be present in root level only [single]
 
-CVE_data_meta must be present in root level, can be present in root level or can be a child of anything [single] [CVEID]
+## CVE_data_format
 
-CVE_affects must be present in root level, can be in root level only [multiple]
+MITRE/other must be present in root level, can be present in root level or can be a child of anything [single]
 
-CVE_vendor child of CVE_affects only, must be at least 1 present [multiple]
+## CVE_data_version
 
-CVE_product child of CVE_vendor only, must be at least 1 present [multiple] [PRODUCT]
+must be present in root level, can be present in root level or can be a child of anything [single]
 
-CVE_version child of CVE_product only, must be at least 1 present [multiple] [VERSION]
+## CVE_data_meta 
 
-CVE_description root level object and child of anything, 1 must be present in root level [single] [DESCRIPTION]
+must be present in root level, can be present in root level or can be a child of anything [single] [CVEID]
 
-CVE_configuration root level object and child of anything, optional, [multiple]
+## CVE_affects
 
-CVE_references root level object and child of anything, 1 must be present, [multiple] [REFERENCES]
+must be present in root level, can be in root level only [multiple]
 
-CVE_workaround  root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+## CVE_vendor
 
-CVE_exploit root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+child of CVE_affects only, must be at least 1 present [multiple]
 
-CVE_timeline root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+## CVE_product
 
-CVE_credit root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+child of CVE_vendor only, must be at least 1 present [multiple] [PRODUCT]
 
-CVE_problemtype root level object and child of anything, 1 must be present in root level [PROBLEMTYPE], generally under root only, [multiple]
+## CVE_version 
 
-CVE_impact root level object and child of anything, 1 must be present in root level, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+child of CVE_product only, must be at least 1 present [multiple] [VERSION]
+
+## CVE_description 
+
+root level object and child of anything, 1 must be present in root level [single] [DESCRIPTION]
+
+## CVE_configuration 
+
+root level object and child of anything, optional, [multiple]
+
+## CVE_references 
+
+root level object and child of anything, 1 must be present, [multiple] [REFERENCES]
+
+## CVE_workaround  
+
+root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+
+## CVE_exploit 
+
+root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+
+## CVE_timeline 
+
+root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+
+## CVE_credit 
+
+root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+
+## CVE_problemtype 
+
+root level object and child of anything, 1 must be present in root level [PROBLEMTYPE], generally under root only, [multiple]
+
+## CVE_impact 
+
+root level object and child of anything, 1 must be present in root level, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
 
 # Examples
 
