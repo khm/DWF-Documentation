@@ -18,6 +18,8 @@ There are several special string values that can exist at the root level of the 
 
 This string identifies what kind of data is held in this JSON file. This is mandatory and designed to prevent problems with attempting to detect what kind of file this is. Valid values for this string are CVE, CNA, CVEMENTOR. 
 
+Must contain: the CVE data type
+
 Mandatory in: root level
 
 Optional in: none
@@ -26,6 +28,8 @@ Optional in: none
 
 This string identifies what data format is used in this JSON file. This is mandatory and designed to prevent problems with attempting to detect what format of data is used. Valid values for this string are MITRE, it can also be user defined (e.g. for internal use). 
 
+Must contain: the CVE data format
+
 Mandatory in: root level
 
 Optional in: all containers
@@ -33,6 +37,8 @@ Optional in: all containers
 ## CVE_data_version
 
 This identifies which version of the data format is in use. This is mandatory and designed to prevent problems with attempting to detect what format of data is used.
+
+Must contain: the data version
 
 Mandatory in: root level, any containers not in same version as parent container/root level object
 
@@ -46,7 +52,7 @@ These objects can in turn contain more objects, arrays, strings and so on. The r
 
 This is meta data about the CVE ID such as the CVE ID, who requested it, who assigned it, when it was requested, when it was assigned, the current state (PUBLIC, REJECT, etc.) and so on. 
 
-Must contains: CVEID
+Must contain: CVE ID (CNA requirement: [CVEID])
 
 Mandatory in: root level
 
@@ -54,55 +60,133 @@ Optional in: none
 
 ## CVE_affects
 
-must be present in root level, can be in root level only [multiple]
+This is the root level container for affected vendors and in turn their affected technologies, products, hardware, etc. It only goes in the root level. 
+
+Must contain: At least one CVE_vendor definition
+
+Mandatory in: root level
+
+Optional in: none
 
 ## CVE_vendor
 
-child of CVE_affects only, must be at least 1 present [multiple]
+This is the container for affected vendors, it only goes in the CVE_affects container. 
+
+Must contain: At least one CVE_product definition
+
+Mandatory in: CVE_affects
+
+Optional in: none
 
 ## CVE_product
 
-child of CVE_vendor only, must be at least 1 present [multiple] [PRODUCT]
+This is the container for affected technologies, products, hardware, etc.
+
+Must contain: At least one affected item by name (CNA requirement: [PRODUCT])
+
+Mandatory in: CVE_vendor
+
+Optional in: none
 
 ## CVE_version 
 
-child of CVE_product only, must be at least 1 present [multiple] [VERSION]
+This is the container for listing the affected/non affected/fixed versions of a given technology, product, hardware, etc.
+
+Must contain: At least one affected version (CNA requirement: [VERSION])
+
+Mandatory in: CVE_product
+
+Optional in: none
 
 ## CVE_description 
 
-root level object and child of anything, 1 must be present in root level [single] [DESCRIPTION]
+This is a description of the issue. It can exist in the root level or within virtually any other container, the intent being that for example different products, and configuraitons may result in different impacts and thus descriptions of the issue. 
+
+Must contain: At least one description (CNA requirement: [DESCRIPTION])
+
+Mandatory in: root level
+
+Optional in: all containers
 
 ## CVE_configuration 
 
-root level object and child of anything, optional, [multiple]
+This is configuration information (format to be decided, we may for example support XCCDF or simple text based descriptions). It is generally meant to contain additional containers (e.g. CVE_description, CVE_impact). 
+
+Must contain: At least one configuration
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_references 
 
-root level object and child of anything, 1 must be present, [multiple] [REFERENCES]
+This is reference data in the form of URLs or file objects (uuencoded and embedded within the JSON file, exact format to be decided, e.g. we may require a compressed format so the objects require unpacking before they are "dangerous"). 
+
+Must contain: At least one reference item  (CNA requirement: [REFERENCES])
+
+Mandatory in: root level
+
+Optional in: all containers
 
 ## CVE_workaround  
 
-root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+This is workaround information, format to be decided. 
+
+Must contain: At least one workaround
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_exploit 
 
-root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+This is exploit information, format to be decided. 
+
+Must contain: At least one exploit / information about exploitation
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_timeline 
 
-root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+This is timeline information (different than CVE_credit in that it may be historical events for which nobody can be directly credited), format to be decided. 
+
+Must contain: At least one timeline entry
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_credit 
 
-root level object and child of anything, optional, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+This is credit information (different than CVE_timeline in that these are specific things being credited to specific people/organizations/etc.), format to be decided. 
+
+Must contain: At least one credit entry
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_problemtype 
 
-root level object and child of anything, 1 must be present in root level [PROBLEMTYPE], generally under root only, [multiple]
+This is problem type information (e.g. CWE identifier).
+
+Must contain: At least one entry, can be text, OWASP, CWE, others may be added (CNA requirement: [PROBLEMTYPE])
+
+Mandatory in: none
+
+Optional in: all containers
 
 ## CVE_impact 
 
-root level object and child of anything, 1 must be present in root level, generally under root, CVE_affects, CVE_vendor, CVE_product, CVE_version, CVE_configuration, [multiple]
+This is impnact type information (e.g. a text description, CVSSv2, CVSSv3, etc.). 
+
+Must contain: At least one entry, can be text, CVSSv2, CVSSv3, others may be added
+
+Mandatory in: none, please note there is a good chance this container may become required as part of the standard, currently the DWF requires it.
+
+Optional in: all containers
 
 # Examples
 
