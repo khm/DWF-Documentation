@@ -6,21 +6,38 @@ CVE_* is a reserved keyword. Essentially every CVE file is a JSON Object that co
 
 CVE_* keywords are officially documented (this document), if you see one that isn’t here then it’s not an official keyword, and you can ignore it. To add/modify/suggest changes to CVE_* keywords and their data structures please do X (issue in GitHub? TBD) so that we can consider it. 
 
-# The CVE top level objects
+# CVE JSON root level object
 
-THe CVE is comprised of a number of top level objects. Essentially the "root" object is just a JSON object with members that in turn are objects. These objects can in turn contain more objects, arrays, strings and so on. 
+The CVE JSON format is comprised of a number of strings (CVE_data_type, CVE_data_format, CVE_data_version) and then a variety of top level objects, referred to as "containers" that can in turn contain more container objects, strings, lists of data and so on. Essentially the "root" object is just a JSON object "{}".
+
+# CVE JSON string items
+
+There are several special string values that can exist at the root level of the CVE JSON data, and one special one, the CVE_data_version, which can exist in the root or within any container.
 
 ## CVE_data_type
 
-CVE/CNA/MENTOR must be present in root level, can be present in root level only [single]
+This string identifies what kind of data is held in this JSON file. This is mandatory and designed to prevent problems with attempting to detect what kind of file this is. Valid values for this string are CVE, CNA, CVEMENTOR. 
+
+Mandatory in: root level
+Optional in: none
 
 ## CVE_data_format
 
-MITRE/other must be present in root level, can be present in root level or can be a child of anything [single]
+This string identifies what data format is used in this JSON file. This is mandatory and designed to prevent problems with attempting to detect what format of data is used. Valid values for this string are MITRE, it can also be user defined (e.g. for internal use). 
+
+Mandatory in: root level
+Optional in: all containers
 
 ## CVE_data_version
 
-must be present in root level, can be present in root level or can be a child of anything [single]
+This identifies which version of the data format is in use. This is mandatory and designed to prevent problems with attempting to detect what format of data is used.
+
+Mandatory in: root level, any containers not in same version as parent container/root level object
+Optional in: all containers
+
+# CVE JSON containers 
+
+These objects can in turn contain more objects, arrays, strings and so on. The reason for this is so that each top level object type can contain self identifying data such as CVE_Data_version. Most objects can in turn contains virtually any other object. In general if you traverse into the nested tree of objects you should not encounter any chains that contains more than one instance of a given object container. 
 
 ## CVE_data_meta 
 
