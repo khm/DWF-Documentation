@@ -23,3 +23,42 @@ To become an Open Source CNA you must meet the following requirements:
 ## Assigning a CVE for the DWF
 
 If you are assigning CVEs on behalf of the DWF please consult the [CVE Assignment HOWTO](CVE-Assignment-HOWTO.md).
+
+# Git Repo layout
+
+## DWF-Documentation
+
+This repo contains the documentation.
+
+Location: https://github.com/distributedweaknessfiling/DWF-Documentation/
+
+## DWF-Master-CVE-Database
+
+This repo contains the Master CVE Database which consists of the CVE Year, start of range, end of range, length of range and where this block is stored (e.g. which Git repo). When you want to find a CVE you can look here to find the repo it exists within. 
+
+Location: https://github.com/distributedweaknessfiling/DWF-Master-CVE-Database
+
+## DWF-CVE-Mentor-Registry
+
+This repo contains a list of CVE Mentors, mentors may be affiliated with none, one, or more CNAs. CVE Mentors are not required to assign CVEs, they may for example be involved for example primarily in training other CVE Mentors or providing supporting to other CVE Mentors. 
+
+Location: https://github.com/distributedweaknessfiling/DWF-CVE-Mentor-Registry
+
+## DWF-CNA-Registry
+
+This is the DWF CNA registry, it is basically just a list of CNAs and their CVE Mentor(s) and the CVE ID blocks they use. Every CNA must have one or more CVE Mentors that work with them. 
+
+Location: https://github.com/distributedweaknessfiling/DWF-CNA-Registry
+
+## DWF-Legal-Acceptance
+
+This repo contains legal acceptance from people who are not yet CVE Mentors or CNAs withint the DWF.
+
+Location: https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance
+
+## DWF-Database
+
+This is the original database used for 2016 and prior assignments, it is largely obsolete.
+
+Location: https://github.com/distributedweaknessfiling/DWF-Database
+
