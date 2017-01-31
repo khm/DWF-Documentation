@@ -26,7 +26,7 @@ If you are assigning CVEs on behalf of the DWF please consult the [CVE Assignmen
 
 # Primary Documents
 
-# TermsOfUse.md
+## TermsOfUse.md
 
 This is the MITRE Terms of Use for CVE data, if you want to submit data to CVE you must agree to these Terms of Use.
 
