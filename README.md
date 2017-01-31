@@ -24,6 +24,26 @@ To become an Open Source CNA you must meet the following requirements:
 
 If you are assigning CVEs on behalf of the DWF please consult the [CVE Assignment HOWTO](CVE-Assignment-HOWTO.md).
 
+# Primary Documents
+
+# TermsOfUse.md
+
+This is the MITRE Terms of Use for CVE data, if you want to submit data to CVE you must agree to these Terms of Use.
+
+The primary source for this document is: https://cve.mitre.org/about/termsofuse.html
+
+## Contributor-Agreement.md
+
+This is the DWF Contributor Agreement, if you want to participate withint the DWF as a CVE mentor or CNA you must accept this agreement. 
+
+The primary source for this document is: http://contributor-covenant.org/version/1/4/
+
+## CNA_Rules_v1.1.pdf
+
+This is the MITRE Common Vulnerabilities and Exposures (CVE) Numbering Authority (CNA) Rules , if you want to be a CNA you must read this and accept these guidelines.
+
+The primary source for this document is: https://cve.mitre.org/cve/cna/CNA_Rules_v1.1.pdf
+
 # Git Repo layout
 
 ## DWF-Documentation
