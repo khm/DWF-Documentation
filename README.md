@@ -1,3 +1,7 @@
+# Status of This Documentation
+
+The DWF process is undergoing rapid evolution and the contents of this repository may not reflect the current state of practice.  This documentation will be updated when the processes have stabilized.
+
 # Distributed Weakness Filing (DWF) Project
 
 The Distributed Weakness Filing (DWF) Project is the first federated CVE Number Authority (CNA). The DWF will initially deal with assigning CVEs for Open Source software (as defined by OSI approved Open Source licenses https://opensource.org/licenses and similar licenses). The DWF will assign CVEs for valid security vulnerabilities using the same or very similar processes as Mitre and other CVE Numbering Authorities currently use. 
